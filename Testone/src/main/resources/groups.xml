@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="groupsTest">
+    <test name="testAll">
+        <classes>
+            <class name="com.testng.groups.GroupsOnClassTeacher"/>
+            <class name="com.testng.groups.GroupsOnClassStudent01"/>
+            <class name="com.testng.groups.GroupsOnClassStudent02"/>
+        </classes>
+    </test>
+
+    <test name="OnlyRunStudent">
+        <!--类分组标签-->
+        <groups>
+            <run>
+                <!--需要执行类的标签以及分组名称-->
+                <include name="student"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.testng.groups.GroupsOnClassTeacher"/>
+            <class name="com.testng.groups.GroupsOnClassStudent01"/>
+            <class name="com.testng.groups.GroupsOnClassStudent02"/>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<suite name="test">
+    <test name="login">
+        <classes>
+            <class name="com.testng.suite.SutieConfig"/>
+            <class name="com.testng.suite.LoginTest"/>
+        </classes>
+    </test>
+
+    <test name="play">
+        <classes>
+            <class name="com.testng.suite.SutieConfig"/>
+            <class name="com.testng.suite.PlayTest"/>
+        </classes>
+    </test>
+
+    <test name="logout">
+        <classes>
+            <class name="com.testng.suite.SutieConfig"/>
+            <class name="com.testng.suite.LogoutTest"/>
+        </classes>
+    </test>
+
+    <test name="ignore">
+        <classes>
+            <class name="com.testng.suite.SutieConfig"/>
+            <class name="com.testng.suite.IgnoreTest"/>
+        </classes>
+    </test>
+</suite>

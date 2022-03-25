@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="接口测试套件">
+    <test name="测试模块">
+        <classes name="TestMethodsDemo">
+            <class name="com.cn.report.TestMethodsDemo"/>
+                <methods>
+                    <!--需要执行方法的标签以及名称-->
+                    <include name="test1"/>
+                    <include name="test2"/>
+                    <include name="test3"/>
+                    <include name="logDemo"/>
+                </methods>
+        </classes>
+    </test>
+    <!--监听器-->
+    <listeners>
+<!--        <listener class-name="com.vimalselvam.testng.listener.ExtentTestNgFormatter"/>-->
+        <listener class-name="com.cn.report.ExtentTestNGIReporterListener"/>
+    </listeners>
+</suite>

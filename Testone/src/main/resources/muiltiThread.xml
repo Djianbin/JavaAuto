@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--parallel属性表示多线程的级别是方法级别的用methods表示方法
+        classes级别：相同的class tag(classes标签中的name相同)下的用例在同一个线程中执行     parallel="classs"
+                    不同的class tag(classes标签中的name不同)下的用例可以在不同的线程中执行
+        methods级别：所有用例都可以在不同的线程下去执行                               parallel="methods"
+        tests级别：不同的test tag（test标签中的 name 不同）下的用例可以在不同的线程下执行 parallel="tests"
+                   相同的test tag（test标签中的 name 相同）下的用例只能在同一个线程中去执行
+        thread-count属性表示最大线程数
+        xml文件配置这种方式不能指定线程池，只有方法上才可以指定线程池
+        -->
+<suite name="thread" parallel="classes" thread-count="3">
+    <test name="demo1">
+        <classes name="class1">
+            <class name="com.testng.multiThread.multiThreadOnXml"/>
+        </classes>
+    </test>
+    <test name="demo2">
+        <classes name="class2">
+            <class name="com.testng.multiThread.multiThreadOnXml"/>
+        </classes>
+    </test>
+</suite>
